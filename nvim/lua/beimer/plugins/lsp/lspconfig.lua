@@ -97,6 +97,11 @@ lspconfig["emmet_language_server"].setup({
 	on_attach = on_attach,
 })
 
+lspconfig["prismals"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
 local signs = { Error = " ", Warn = " ", Hint = "󰵷 ", Info = " " }
 for type, icon in pairs(signs) do
 	local hl = "DiagnosticSign" .. type
