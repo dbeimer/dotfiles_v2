@@ -24,6 +24,7 @@ mason_lspconfig.setup({
 		"lua_ls",
 		"emmet_language_server",
 		"prismals",
+		"pyright",
 	},
 })
 
