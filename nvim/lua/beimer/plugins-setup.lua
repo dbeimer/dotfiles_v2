@@ -117,7 +117,7 @@ return require("packer").startup(function(use)
 		config = function()
 			require("chatgpt").setup({
 				api_key_cmd = "op read op://Personal/OpenAi/credential --no-newline",
-				model = "gtp-4o",
+				model = "gtp-4o-mini",
 			})
 		end,
 		requires = {
@@ -126,6 +126,13 @@ return require("packer").startup(function(use)
 			"folke/trouble.nvim",
 			"nvim-telescope/telescope.nvim",
 		},
+	})
+
+	use({
+		"folke/which-key.nvim",
+		config = function()
+			require("which-key").setup()
+		end,
 	})
 
 	if packer_bootstrap then

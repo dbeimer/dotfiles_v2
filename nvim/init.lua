@@ -7,7 +7,6 @@ require("beimer.plugins.comment")
 require("beimer.plugins.nvim-tree")
 require("beimer.plugins.lualine")
 require("beimer.plugins.nvim-cmp")
-require("beimer.plugins.telescope")
 
 -- lsp
 require("beimer.plugins.lsp.mason")
@@ -21,6 +20,7 @@ require("beimer.plugins.gitsigns")
 
 -- still in config
 require("beimer.plugins.nvim-dap")
+require("beimer.plugins.telescope")
 require("beimer.plugins.neotest")
 require("beimer.plugins.notify")
 require("beimer.custom-fuctions")
