@@ -40,3 +40,18 @@ opt.splitbelow = true
 -- vim.g.copilot_no_tab_map = true
 vim.cmd('imap <silent><script><expr> <C-J> copilot#Accept("<CR>")')
 vim.cmd("let g:copilot_no_tab_map = v:true")
+
+-- autosave folds
+local autosaveFoldsId = vim.api.nvim_create_augroup("AutoSaveFolds", { clear = true })
+
+vim.api.nvim_create_autocmd("BufWinLeave", {
+	pattern = "?*",
+	command = "mkview 1",
+	group = autosaveFoldsId,
+})
+
+vim.api.nvim_create_autocmd("BufWinEnter", {
+	pattern = "?*",
+	command = "silent! loadview 1",
+	group = autosaveFoldsId,
+})
