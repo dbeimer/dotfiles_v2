@@ -108,18 +108,12 @@ return require("packer").startup(function(use)
 			"nvim-lua/plenary.nvim",
 			"antoinemadec/FixCursorHold.nvim",
 			"nvim-treesitter/nvim-treesitter",
-			"nvim-neotest/neotest-jest",
+			"dbeimer/neotest-jest",
 		},
 	})
 
 	use({
 		"jackMort/ChatGPT.nvim",
-		config = function()
-			require("chatgpt").setup({
-				api_key_cmd = "op read op://Personal/OpenAi/credential --no-newline",
-				model = "gtp-4o-mini",
-			})
-		end,
 		requires = {
 			"MunifTanjim/nui.nvim",
 			"nvim-lua/plenary.nvim",

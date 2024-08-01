@@ -49,14 +49,19 @@ neotest.setup({
 					vim.notify(default_unit_command)
 				end
 				if default_unit_command then
-					return default_unit_command
+					return "npx " .. default_unit_command
 				end
 
 				return require("neotest-jest.jest-util").getJestCommand(vim.fn.expand("%:p:h"))
 			end,
 			jestConfigFile = function(file)
+				vim.notify(file)
 				-- TODO: improve thi validation
 				-- NOTE: for e2e tests could be great to ask for config file if it's not founded
+				if string.match(file, ".*/(.-)%.integration%-spec%.ts$") then
+					vim.notify("🚀 detected!")
+					return "jest-integration.json"
+				end
 				if string.match(file, ".*/(.-)%.e2e%-spec%.ts$") then
 					vim.notify("Test e2e detected!")
 					return "test/jest-e2e.json"
@@ -74,6 +79,7 @@ neotest.setup({
 				return cwd
 			end,
 			jest_test_discovery = true,
+			testPattern = ".*\\.integration-spec\\.ts$",
 		}),
 	},
 	discovery = {
