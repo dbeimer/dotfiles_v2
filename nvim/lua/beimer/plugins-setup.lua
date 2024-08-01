@@ -86,6 +86,7 @@ return require("packer").startup(function(use)
 	use("tpope/vim-fugitive")
 	use("junegunn/gv.vim")
 	use("lewis6991/gitsigns.nvim")
+	use("sindrets/diffview.nvim")
 
 	-- vscode extensions
 	use({ "dsznajder/vscode-es7-javascript-react-snippets", run = "yarn install --frozen-lockfile && yarn compile" })
