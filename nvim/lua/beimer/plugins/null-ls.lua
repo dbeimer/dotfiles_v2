@@ -12,7 +12,9 @@ null_ls.setup({
 	sources = {
 		formatting.prettier,
 		formatting.stylua,
-		diagnostics.eslint_d,
+		diagnostics.eslint_d.with({
+			diagnostics_format = "[eslint] #{m}\n(#{c})",
+		}),
 	},
 	-- configure format on save
 	on_attach = function(current_client, bufnr)

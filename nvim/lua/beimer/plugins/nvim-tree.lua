@@ -8,4 +8,9 @@ end
 vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
-nvimtree.setup()
+nvimtree.setup({
+	update_focused_file = {
+		enable = true,
+		update_cwd = true,
+	},
+})
