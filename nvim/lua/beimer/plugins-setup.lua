@@ -114,6 +114,17 @@ return require("packer").startup(function(use)
 	})
 
 	use({
+		"neogitOrg/neogit",
+		tag = "v0.0.1",
+		requires = {
+			"nvim-lua/plenary.nvim",
+			"sindrets/diffview.nvim",
+			"nvim-telescope/telescope.nvim",
+			"ibhagwan/fzf-lua",
+		},
+	})
+
+	use({
 		"jackMort/ChatGPT.nvim",
 		requires = {
 			"MunifTanjim/nui.nvim",
