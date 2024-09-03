@@ -55,7 +55,6 @@ neotest.setup({
 				return require("neotest-jest.jest-util").getJestCommand(vim.fn.expand("%:p:h"))
 			end,
 			jestConfigFile = function(file)
-				vim.notify(file)
 				-- TODO: improve thi validation
 				-- NOTE: for e2e tests could be great to ask for config file if it's not founded
 				if string.match(file, ".*/(.-)%.integration%-spec%.ts$") then
