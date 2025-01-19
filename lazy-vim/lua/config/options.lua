@@ -4,3 +4,6 @@
 
 vim.g.lazyvim_eslint_auto_format = true
 vim.g.lazyvim_python_lsp = "pyright"
+
+-- Lua initialization file
+vim.g.nightflyTransparent = true
