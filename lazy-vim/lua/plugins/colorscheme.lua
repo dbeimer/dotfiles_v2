@@ -42,6 +42,13 @@ return {
           menu = lackluster.color.gray3,
           popup = "default",
         },
+        tweak_highlight = {
+          -- modify @keyword's highlights to be bold and italic
+          ["@comment"] = {
+            overwrite = false, -- overwrite falsey will extend/update lackluster's defaults (nil also does this)
+            italic = true,
+          },
+        },
       })
     end,
   },
