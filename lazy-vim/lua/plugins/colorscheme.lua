@@ -75,4 +75,24 @@ return {
     lazy = false,
     priority = 1000,
   },
+  {
+    "ellisonleao/gruvbox.nvim",
+    priority = 1000,
+    config = true,
+    opts = {
+      transparent_mode = true,
+      constrast = "soft",
+    },
+  },
+  { "Everblush/nvim", name = "everblush", opts = {
+    transparent_background = true,
+  } },
+  {
+    "rebelot/kanagawa.nvim",
+    priority = 1000,
+    lazy = false,
+    opts = {
+      transparent = true,
+    },
+  },
 }
